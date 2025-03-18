@@ -1,4 +1,4 @@
-function Navbar() {
+export default function Navbar() {
     try {
         const [isOpen, setIsOpen] = React.useState(false);
 
@@ -10,10 +10,10 @@ function Navbar() {
                             <a href="#/" className="text-2xl font-bold text-purple-600">Perfumari</a>
                         </div>
                         <div className="hidden md:flex items-center space-x-8">
-                            <a href="#/" className="nav-link text-gray-700 hover:text-purple-600">Home</a>
-                            <a href="#/catalog" className="nav-link text-gray-700 hover:text-purple-600">Catalog</a>
-                            <a href="#/about" className="nav-link text-gray-700 hover:text-purple-600">About</a>
-                            <a href="#/contact" className="nav-link text-gray-700 hover:text-purple-600">Contact</a>
+                            <a href="#/" className="nav-link text-gray-700 hover:text-purple-600">Início</a>
+                            <a href="#/catalog" className="nav-link text-gray-700 hover:text-purple-600">Catálogo</a>
+                            <a href="#/about" className="nav-link text-gray-700 hover:text-purple-600">Sobre</a>
+                            <a href="#/contact" className="nav-link text-gray-700 hover:text-purple-600">Contato</a>
                         </div>
                         <div className="md:hidden flex items-center">
                             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
@@ -25,18 +25,17 @@ function Navbar() {
                 {isOpen && (
                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                            <a href="#/" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Home</a>
-                            <a href="#/catalog" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Catalog</a>
-                            <a href="#/about" className="block px-3 py-2 text-gray-700 hover:text-purple-600">About</a>
-                            <a href="#/contact" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Contact</a>
+                            <a href="#/" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Início</a>
+                            <a href="#/catalog" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Catálogo</a>
+                            <a href="#/about" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Sobre</a>
+                            <a href="#/contact" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Contato</a>
                         </div>
                     </div>
                 )}
             </nav>
         );
     } catch (error) {
-        console.error('Navbar component error:', error);
-        reportError(error);
+        console.error('Erro no componente Navbar:', error);
         return null;
     }
 }

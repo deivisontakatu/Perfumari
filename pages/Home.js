@@ -1,45 +1,41 @@
-function Home() {
+export default function Home() {
     try {
         return (
             <div data-name="home-page">
-                <section className="h-screen flex items-center justify-center bg-gradient-to-r from-purple-100 to-pink-100">
-                    <div className="text-center px-4 fade-in">
-                        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                            Discover Your Signature Scent
-                        </h1>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Experience the art of perfumery with our curated collection of luxury fragrances
-                        </p>
+                {/* Cabeçalho */}
+                <header className="bg-white shadow-md py-4 px-6 fixed w-full top-0 z-10">
+                    <div className="max-w-7xl mx-auto flex justify-between items-center">
+                        <h1 className="text-2xl font-bold text-gray-900">Perfumari</h1>
+                        <nav>
+                            <ul className="flex space-x-6">
+                                <li><a href="#sobre" className="text-gray-600 hover:text-gray-900">Sobre</a></li>
+                                <li><a href="#contato" className="text-gray-600 hover:text-gray-900">Contato</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                </section>
+                </header>
 
-                <section className="py-20 px-4 bg-white">
-                    <div className="max-w-7xl mx-auto">
-                        <h2 className="text-3xl font-bold text-center mb-16">Our Expertise</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="text-center p-6 slide-in">
-                                <i className="fas fa-star text-4xl text-purple-600 mb-4"></i>
-                                <h3 className="text-xl font-semibold mb-2">Premium Selection</h3>
-                                <p className="text-gray-600">Carefully curated collection of luxury fragrances</p>
+                {/* Seção Hero */}
+                <section className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#b3e8ed] to-[#cb9999] text-center px-4 fade-in">
+                    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in-up">
+                        Encontre Sua Fragrância Perfeita
+                    </h1>
+                    <p className="text-xl text-gray-700 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                        Explore nossa coleção exclusiva e descubra sua essência ideal.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                        {['Perfumes Importados', 'Perfumes Árabes', 'Body Splashes'].map((item, index) => (
+                            <div key={index} className="p-6 bg-white shadow-lg rounded-lg text-center animate-fade-in-up delay-300">
+                                <h3 className="text-xl font-semibold mb-2">{item}</h3>
+                                <p className="text-gray-600">Sinta a sofisticação de nossas fragrâncias.</p>
                             </div>
-                            <div className="text-center p-6 slide-in">
-                                <i className="fas fa-hand-holding-heart text-4xl text-purple-600 mb-4"></i>
-                                <h3 className="text-xl font-semibold mb-2">Personal Guidance</h3>
-                                <p className="text-gray-600">Expert advice to find your perfect scent</p>
-                            </div>
-                            <div className="text-center p-6 slide-in">
-                                <i className="fas fa-gem text-4xl text-purple-600 mb-4"></i>
-                                <h3 className="text-xl font-semibold mb-2">Authentic Products</h3>
-                                <p className="text-gray-600">Guaranteed genuine fragrances</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </section>
             </div>
         );
     } catch (error) {
-        console.error('Home page error:', error);
-        reportError(error);
+        console.error('Erro na página inicial:', error);
         return null;
     }
 }
