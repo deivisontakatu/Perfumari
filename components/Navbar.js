@@ -13,7 +13,7 @@ export default function Navbar() {
                             <a href="#/" className="nav-link text-gray-700 hover:text-purple-600">Início</a>
                             <a href="#/catalog" className="nav-link text-gray-700 hover:text-purple-600">Catálogo</a>
                             <a href="#/about" className="nav-link text-gray-700 hover:text-purple-600">Sobre</a>
-                            <a href="#/contact" className="nav-link text-gray-700 hover:text-purple-600">Contato</a>
+
                         </div>
                         <div className="md:hidden flex items-center">
                             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
@@ -28,7 +28,7 @@ export default function Navbar() {
                             <a href="#/" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Início</a>
                             <a href="#/catalog" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Catálogo</a>
                             <a href="#/about" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Sobre</a>
-                            <a href="#/contact" className="block px-3 py-2 text-gray-700 hover:text-purple-600">Contato</a>
+
                         </div>
                     </div>
                 )}
